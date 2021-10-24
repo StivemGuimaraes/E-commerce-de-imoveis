@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/logo1.png"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>sistema web</title>
+  </head>
+  <body class="bg-dark">
+    <div class="row">
+       <!-- Imagem e texto -->   
+      <nav class="navbar navbar-dark bg-danger nav justify-content-center col-sm-12">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo.png" width="100" height="100" class="d-inline-block align-top" alt="" style="margin-top: -45px"><h1 class="d-inline-block mr-5">E-commerce de imoveis</h1>
+        </a>
+      </nav>
+      </div>
+
+
+      <ul class="nav nav-tabs justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link" href="index.html">home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="sistema web.html">usuarios</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">imovel</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="imovel.html">Cadastro do imovel</a>
+      <a class="dropdown-item" href="endereco.html">endereço do imovel</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">funcionario</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="funcionario.html">Cadastro do funcionario</a>
+      <a class="dropdown-item" href="endereco_func.html">endereço do funcionario</a>
+  </li>
+</ul>
+</div>
+
+<div class="container">
+      <h2 class="text-center my-4">funcionario</h2> 
+        <div class="row justify-content-center">
+          <div class="col-sm-12 col-md-10 col-lg-8">
+          <fieldset class="border border-dark">
+            <form class="ml-3 mr-3 mt-3" autocomplete="off" id="cadastro">
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="inputemail">Email</label>
+                  <input type="email" name="email" placeholder="digite seu email" id="inputemail" class="form-control">
+                </div>
+              </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                  <label for="inputsenha">Nome</label>
+                  <input type="text" name="nome" placeholder="digite seu nome" class="form-control" id="inputsenha">
+                 </div>
+                 <div class="form-group col-md-6">
+                  <label for="inputsenha">Sobrenome</label>
+                  <input type="text" name="Sobrenome" placeholder="digite seu Sobrenome" class="form-control" id="inputsenha">
+                 </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputcpf">CPF</label>
+                    <input type="text" name="cpf" class="form-control cpf-mask" id="inputcpf" placeholder="digite seu CPF" maxlength="11" onkeypress="$(this).mask('000.000.000-00')">                   
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputcpf">RG</label>
+                    <input type="text" name="rg" class="form-control" id="inputcpf" placeholder="digite seu RG" maxlength="9" onkeypress="$(this).mask('00.000.000-0')">                   
+                  </div>
+                </div>
+                <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="inputcpf">Data de nascimento</label>
+                    <input type="date" name="data" class="form-control" id="inputcpf" placeholder="digite sua data de nascimento">
+                  </div>
+                </div>
+                <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="inputcpf">Telefone</label>
+                    <input type="text" name="tel" class="form-control" id="inputcpf" placeholder="digite deu telefone" maxlength="11" onkeypress="$(this).mask('(00)-00000-0000')">                   
+                  </div>
+                </div>
+                <label>Sexo</label>
+                <div class="form-row">
+                  <div class="form-group">
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input type="radio" name="sexo" class="form-check-input" value="Masculino">Masculino
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check form-check-inline">
+                      <label class="form-check-label">
+                        <input type="radio" name="sexo" class="form-check-input" value="Feminino">Feminino
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-12">
+                  <input type="submit" id="incluir" name="botao" value="incluir" class="btn btn-primary mb-2">
+                  <input type="submit" id="deletar" name="botao" value="deletar" class="btn btn-primary mb-2">
+                  <input type="submit" id="alterar" name="botao" value="alterar" class="btn btn-primary mb-2">
+                  <input type="submit" id="consultar" name="botao" value="consultar" class="btn btn-primary mb-2">
+                  </div>
+                </div>        
+            </form>
+            <!--resposta do php-->
+            <div class="row justify-content-center">
+              <h3></h3>
+            </div>
+              <div class="row justify-content-center">
+             <div id="resposta">
+
+             </div>
+            </div>
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+<script>
+  $(document).ready(function() {
+
+    $('#incluir').click(function(){
+
+      var dados = $("#cadastro").serialize();
+
+      $.ajax({
+        method: 'POST',
+        url: 'func_sistema.php',
+        data: dados,
+      })
+      .done(function(msg){
+        $("h3").html("cadastramento deu certo");
+        $("#resposta").html(msg);
+        alert("cadastrado com sucesso");
+
+      })
+      .fail(function(){
+        alert("falha no cadastramento");
+      })
+    });
+  });
+
+  $(document).ready(function() {
+
+    $('#deletar').click(function(){
+
+      var dados = $("#cadastro").serialize();
+
+      $.ajax({
+        method: 'POST',
+        url: 'func_sistema.php',
+        data: dados,
+      })
+      .done(function(msg){
+        $("h3").html("deletamento deu certo");
+        $("#resposta").html(msg);
+        alert("exclusão da conta feita com sucesso");
+
+      })
+      .fail(function(){
+        alert("falha na exclusão");
+      })
+    });
+  });
+
+  $(document).ready(function() {
+
+    $('#consultar').click(function(){
+
+      var dados = $("#cadastro").serialize();
+
+      $.ajax({
+        method: 'POST',
+        url: 'func_sistema.php',
+        data: dados,
+      })
+      .done(function(msg,res){
+        $("h3").html("consulta dos dados");
+        $("#resposta").html(msg);
+        var usuario = JSON.parse(res);
+
+        var bloco = "";
+        bloco += "CPF: " + funcionario[1].cpf + "<br>";
+        bloco += "email: " + funcionario[1].email + "<br>";
+        bloco += "nome: " + funcionario[1].nome + "<br>";
+        bloco += "sobrenome: " + funcionario[1].sobrenome + "<br>";
+        bloco += "RG: " + funcionario[1].rg + "<br>";
+        bloco += "data de nascimento: " + funcionario[1].data_nasci + "<br>";
+        bloco += "sexo: " + funcionario[1].sexo + "<br>";
+        bloco += "telefone " + funcionario[1].fk_contato + "<br>";
+        bloco += "<hr>";
+
+        $("#resposta").append(bloco);
+      })
+      .fail(function(){
+        alert("falha na consulta");
+      })
+    });
+  });
+
+  $(document).ready(function() {
+
+    $('#alterar').click(function(){
+
+      var dados = $("#cadastro").serialize();
+
+      $.ajax({
+        method: 'POST',
+        url: 'func_sistema.php',
+        data: dados,
+      })
+      .done(function(msg){
+        $("h3").html("alteração deu certo");
+        $("#resposta").html(msg);
+        alert("alteração dos dados feita com sucesso");
+
+      })
+      .fail(function(){
+        alert("falha na alteração");
+      })
+    });
+  });   
+</script> 

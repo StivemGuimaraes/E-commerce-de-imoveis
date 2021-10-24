@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/40a6dd1466.js" crossorigin="anonymous"></script>
+
+	<title>Desenvolvimento do Projeto</title>
+</head>
+
+<body class="bg-dark">
+
+	<div class="container text-white mt-2">
+		<h4>COMPONENTES DO GRUPO</h4>
+		<h5>Caio dos Santos Silva, Emanuel Victor Sousa Da Silva, Felipe Dos Santos Macêdo, Marcos Vinicius, Stivem Sidney Guimarães</h5>
+
+		<h4>TEMA</h4>
+		<h5> Site de e-commerce de imoveis</h4> 
+
+		<h4>RESUMO</h4>
+		<h5>Iremos criar um site de e-commerce de imoveis, iremos cadastrar usuarios e imoveis para pegar informação imediata dos usuarios e imoveis e depois iremos criar um sistema web para gerenciar o site, iremos usar o php nesse projeto, enquanto o nosso tcc iremos usar o android.</h5>
+		<h4>Estudo de navegabilidade</h4>
+		<br>
+		<h3>pagina inicial</h3>
+		<img src="img/indexpaint.png" height="30%" width="30%" class="mb-5">
+		<h3>pagina de cadastro</h3>
+		<img src="img/cadastropaint.png" height="30%" width="30%" class="mb-5">
+		<h3>pagina de login</h3>
+		<img src="img/login.png" height="30%" width="30%" class="mb-5">
+		<h3>pagina de compras</h3>
+		<img src="img/Casassitioschacaraspaint.png" height="30%" width="30%" class="mb-5">
+		<h4>estrutura de dados</h4>
+		<table border="1" class="border-light">
+			<tr>
+				<th>Tabela</th>
+				<th>Nome da coluna</th>
+				<th>Tipo de dados</th>
+				<th>Comprimento</th>
+				<th>Restrições</th>
+				<th>Descrição</th>
+			</tr>
+			<tr>
+				<td>Usuários</td>
+				<td>email</td>
+				<td>varchar</td>
+				<td>50 bytes</td>
+				<td>not null</td>
+				<td>email do usuario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>senha</td>
+				<td>vachar</td>
+				<td>10 bytes</td>
+				<td>not null</td>
+				<td>senha do usuario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Cpf</td>
+				<td>varchar</td>
+				<td>15 bytes</td>
+				<td>pk not null</td>
+				<td>Cadastro de pessoa física</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Nome</td>
+				<td>Varchar</td>
+				<td>20 bytes</td>
+				<td>not null</td>
+				<td>Nome da pessoa</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Sobrenome</td>
+				<td>Varchar</td>
+				<td>40 bytes</td>
+				<td>not null</td>
+				<td>sobrenome da pessoa</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Rg</td>
+				<td>Varchar</td>
+				<td>15 bytes</td>
+				<td>Not null</td>
+				<td>Registro geral</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Nascimento</td>
+				<td>Date</td>
+				<td></td>
+				<td>not Null</td>
+				<td>Data de nascimento do usuário</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>sexo</td>
+				<td>varchar</td>
+				<td>9 bytes</td>
+				<td>not null</td>
+				<td>sexo do usuario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>fk_contato</td>
+				<td>varchar</td>
+				<td>15 bytes</td>
+				<td>fk, not null</td>
+				<td>telefone do usuario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>fk_imovel</td>
+				<td>int</td>
+				<td>20 bytes</td>
+				<td>fk</td>
+				<td>chave estrageira dos imoveis</td>
+			</tr>
+			<tr>
+				<td>Imóveis</td>
+				<td>Codigo</td>
+				<td>int</td>
+				<td>20 bytes</td>
+				<td>Pk not null</td>
+				<td>Codigo do imóvel</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>descrição</td>
+				<td>Varchar</td>
+				<td>30 bytes</td>
+				<td>Not null</td>
+				<td>descrição do imóvel</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>preço</td>
+				<td>Double</td>
+				<td>20 bytes</td>
+				<td>not null</td>
+				<td>Preço do imóvel</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>fk_endereço</td>
+				<td>char</td>
+				<td>15 bytes</td>
+				<td>Fk, not null</td>
+				<td>Imovel específico</td>
+			</tr>
+			<tr>
+				<td>Endereço imóvel</td>
+				<td>Cep</td>
+				<td>Char</td>
+				<td>15 bytes</td>
+				<td>Pk not null</td>
+				<td>Código de endereçamento postal</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Estado</td>
+				<td>char</td>
+				<td>2 bytes</td>
+				<td>not null</td>
+				<td>estado de localização do imóvel</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Cidade</td>
+				<td>varhcar</td>
+				<td>30 bytes</td>
+				<td>not null</td>
+				<td>Cidade do imóvel</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Rua</td>
+				<td>Varchar</td>
+				<td>100 bytes</td>
+				<td>not null</td>
+				<td>Rua da localização do imóvel</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Numero</td>
+				<td>Varchar</td>
+				<td>3 bytes</td>
+				<td>Not null</td>
+				<td>Numero do imóvel</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Bairro</td>
+				<td>Varchar</td>
+				<td>40 bytes</td>
+				<td>not null</td>
+				<td>Bairro do imóvel</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>complemento</td>
+				<td>Varchar</td>
+				<td>40 bytes</td>
+				<td>null</td>
+				<td>complemento do imovel</td>
+			</tr>
+			<tr>
+				<td>funcionarios</td>
+				<td>Cpf</td>
+				<td>varchar</td>
+				<td>15 bytes</td>
+				<td>pk not null</td>
+				<td>cpf do funcionario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>email</td>
+				<td>varchar</td>
+				<td>50 bytes</td>
+				<td>not null</td>
+				<td>email do funcionario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Nome</td>
+				<td>Varchar</td>
+				<td>20 bytes</td>
+				<td>not null</td>
+				<td>Nome do funcionario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Sobrenome</td>
+				<td>Varchar</td>
+				<td>40 bytes</td>
+				<td>not null</td>
+				<td>sobrenome do funcionario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Rg</td>
+				<td>Varchar</td>
+				<td>15 bytes</td>
+				<td>Not null</td>
+				<td>Registro geral</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Nascimento</td>
+				<td>Date</td>
+				<td></td>
+				<td>not Null</td>
+				<td>Data de nascimento do funcionario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>sexo</td>
+				<td>varchar</td>
+				<td>9 bytes</td>
+				<td>not null</td>
+				<td>sexo do funcionario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>fk_contato</td>
+				<td>varchar</td>
+				<td>15 bytes</td>
+				<td>fk, not null</td>
+				<td>telefone do funcionario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>fk_endereco</td>
+				<td>varchar</td>
+				<td>15 bytes</td>
+				<td>fk, not null</td>
+				<td>chave estrageira do endereço do funcionario</td>
+			</tr>
+			<tr>
+				<td>Endereço_func</td>
+				<td>Cep</td>
+				<td>varchar</td>
+				<td>15 bytes</td>
+				<td>Pk not null</td>
+				<td>Código de endereçamento postal</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Estado</td>
+				<td>char</td>
+				<td>2 bytes</td>
+				<td>not null</td>
+				<td>estado de localização do funcionario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Cidade</td>
+				<td>varchar</td>
+				<td>30 bytes</td>
+				<td>not null</td>
+				<td>Cidade do funcionario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Rua</td>
+				<td>Varchar</td>
+				<td>100 bytes</td>
+				<td>not null</td>
+				<td>Rua da localização do funcionario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Numero</td>
+				<td>Varchar</td>
+				<td>3 bytes</td>
+				<td>Not null</td>
+				<td>Numero do funcionario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Bairro</td>
+				<td>Varchar</td>
+				<td>40 bytes</td>
+				<td>not null</td>
+				<td>Bairro do funcionario</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>complemento</td>
+				<td>Varchar</td>
+				<td>40 bytes</td>
+				<td>null</td>
+				<td>complemento do funcionario</td>
+			</tr>
+			<tr>
+				<td>telefone1</td>
+				<td>contato</td>
+				<td>Varchar</td>
+				<td>15 bytes</td>
+				<td>pk, not null</td>
+				<td>numero de telefone do funcionario</td>
+			</tr>
+			<tr>
+				<td>telefone</td>
+				<td>contato</td>
+				<td>Varchar</td>
+				<td>15 bytes</td>
+				<td>pk, not null</td>
+				<td>numero de telefone do usuario</td>
+			</tr>
+		</table>
+		<hr>
+
+		<h5>Semana 02/09->08/09 - v01</h5>			
+		<h5>criando o site principal usando o bootstrap</h5>
+
+		<h5>Semana 09/09->15/09 - v02</h5>
+        <h5>criando o nav-bar para dividir o tipo de imovel e uma barra de pesquisa para procura o imovel, criando um carrosel para exibir os imoveis, um menu para auxiliar os usuarios.</h5>
+        
+        <h5>Semana 16/09->22/09 - v03</h5>
+        <h5>criando o resto do site, como os imovies que irão ser vendidos, criando tambem as redes sociais e criando o dicionario de dados para planejamento do banco de dados que sera mysql.</h5>
+
+        <h5>Semana 23/09->29/09 - v04</h5>
+        <h5>criando a pagina de cadastramento do usuario, criando banco de dados de imoveis que ficaram as informaçoes do usuario e tambem dos imoveis cadastrados, terminando o back-end do cadastramento do usuario que é php.</h5>
+
+        <h5>Semana 30/09->06/10 - v05</h5>
+        <h5>colocando o estudo de navegabilidade e terminando o login do usuario para entrar na conta dele, terminando a conta do usuario para ele deletar a conta dele, consultar seus dados e alterar seus dados.</h5>
+
+        <h5>semana 07/10->13/10 - v06</h5>
+        <h5>começando o sistema web e terminando o sistema de gerenciamento do usuario e movendo para fazer os cadastros dos imoveis e terminando endereço deles, fazendo o cadastro dos imoveis no banco de dados adicionando nele a descrição, preço e imagem dos imoveis, terminando a pagina de compras de imoveis e terminando o back-end do php dos imoveis, colocando as informações do banco de dados no site.</h5>
+
+        <h5>semana 14/10->20/10 - v07</h5>
+        <h5>criando uma tabela de funcionario e uma tabela de endereço do funcionario, para armazenar dados dos funcionarios e serão registrados no sistema web.</h5>
+
+        <h5>semana 21/10->27/10 - v08</h5>
+        <h5>criando os campos de cadastro dos funcionarios no sistema web e campos de endereço dos funcionarios,terminando a parte do back-end do funcionario e adicionando o store procedure.</h5> 
+
+		
+		<a class="btn btn-outline-danger mt-3" href="index.html" role="button">Voltar</a>
+	
+	</div>
+
+
+	
+
+
+
+
+
+
+
+
+	<!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
